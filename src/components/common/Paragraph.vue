@@ -1,5 +1,5 @@
 <template>
-    <p :class="customClass" class="text-">
+    <p :class="customClass" class="text-lg leading-[30px] font-midium text-light-gray">
         <slot>{{ text }}</slot>
     </p>
 </template>
@@ -12,7 +12,7 @@ defineProps({
     },
     customClass: {
         type: String,
-        default: 'text-lg leading-[30px] font-midium text-light-gray'
+        default: ''
     }
 })
 </script>
