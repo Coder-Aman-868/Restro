@@ -1,1 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+@theme inline {
+  /* -- FONT SIZE -- */
+  --text-custom-xs: 13px;
+  --text-custom-base: 16px;
+  --text-custom-xl: 22px;
+  --text-custom-2xl: 26px;
+  --text-custom-5xl: 50px;
+  --text-custom-6xl: 64px;
+  /* -- COLOR -- */
+  --color-light-pink: #FFAA94;
+  --color-light-gray: #A6A6A6;
+  /* -- LINE HEIGHT -- */
+  --spacing-100: 100%;
+  --spacing-105: 105%;
+  --spacing-107: 107%;
+  --spacing-125: 125%;
+  --spacing-130: 130%;
+  --spacing-127: 127%;
+}
