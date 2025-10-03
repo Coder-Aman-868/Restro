@@ -27,8 +27,8 @@ import OurFeature from './components/OurFeature.vue';
     <div class="bg-dark-red size-[634px] rounded-[9999px] blur-[500px] absolute -top-[280px] -left-[317px]"></div>
     <div class="bg-light-pink size-[634px] rounded-[9999px] blur-[500px] absolute -top-[364px] -right-[225px]"></div>
     <div class="bg-light-red size-[634px] rounded-[9999px] blur-[500px] absolute top-[270px] -right-[317px]"></div>
-    <div class="bg-white size-[634px] rounded-[9999px] blur-[200px] absolute top-[219px] left-1/2 -translate-x-1/2"></div>
-
+    <div class="bg-white size-[634px] rounded-[9999px] blur-[200px] absolute top-[219px] left-1/2 -translate-x-1/2">
+    </div>
   </div>
 </template>
 
