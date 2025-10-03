@@ -1,9 +1,10 @@
 <template>
-    <div class="px-5 py-[130px]">
+    <div class="px-5 md:py-[130px] sm:py-20 py-[60px]">
         <div class="max-w-[1180px] mx-auto w-full flex-col flex justify-center items-center">
-            <Heading custom-class="sm:!text-[40px] !text-3xl !text-dark-black" text="More than 25,000 teams use Collabs">
+            <Heading custom-class="sm:!text-[40px] !text-3xl !text-dark-black"
+                text="More than 25,000 teams use Collabs">
             </Heading>
-            <Vue3Marquee class="mt-[61px] text-" :pauseOnHover="true" >
+            <Vue3Marquee class="mt-[61px] text-" :pauseOnHover="true">
                 <img class="ml-10" src="../assets/images/png/descript.png" />
                 <img class="ml-10" src="../assets/images/png/grammarly.png" />
                 <img class="ml-10" src="../assets/images/png/intercom.png" />

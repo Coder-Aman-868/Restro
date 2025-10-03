@@ -7,21 +7,19 @@
                     'flex gap-10 justify-center',
                     'max-lg:flex-col max-lg:items-center max-lg:h-screen max-lg:w-full max-lg:bg-white z-[99]',
                     open ? 'max-lg:right-0' : 'max-lg:-right-full',
-                    'max-lg:fixed max-lg:top-0 max-lg:gap-5 duration-300 ease-in-out'
+                    'max-lg:fixed max-lg:top-0 max-lg:gap-5 duration-600 ease-in-out'
                 ]">
                     <li v-for="link in links" class="text-base text-light-gray font-medium leading-100" :key="index">
                         <a @click="toggleByNavLinks"
                             class="hover:text-light-pink transition-all duration-300 ease-in-out after:absolute relative after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:rounded-2xl after:bg-light-pink hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
                             :href="link.path">{{ link.name }}</a>
                     </li>
-                    <li class="flex sm:hidden">
-                        <div class="flex-col justify-center items-center gap-5">
-                            <button
-                                class="text-base text-light-gray font-medium leading-100 border hover:border-light-pink hover:text-light-pink transition-all duration-300 ease-in-out cursor-pointer px-5 py-3 rounded-lg">Login</button>
-                            <button
-                                class="bg-light-pink text-white border-transparent text-base font-medium leading-100 px-5 py-3 rounded-lg hover:bg-transparent border hover:border-light-pink hover:text-light-pink transition-all duration-300 ease-in-out cursor-pointer">Sign
-                                Up</button>
-                        </div>
+                    <li class="flex !flex-col !justify-center !items-center !gap-2 sm:hidden px-5 w-full">
+                        <button
+                            class="text-base text-light-gray font-medium leading-100 border hover:border-light-pink hover:text-light-pink transition-all duration-300 ease-in-out cursor-pointer px-5 py-3 rounded-lg max-w-[400px] w-full">Login</button>
+                        <button
+                            class="bg-light-pink text-white border-transparent text-base font-medium leading-100 px-5 py-3 rounded-lg hover:bg-transparent border hover:border-light-pink hover:text-light-pink transition-all duration-300 ease-in-out cursor-pointer max-w-[400px] w-full">Sign
+                            Up</button>
                     </li>
                 </ul>
                 <div class="sm:flex hidden justify-center items-center gap-5">
