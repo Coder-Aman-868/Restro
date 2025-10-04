@@ -4,6 +4,9 @@
 * {
   font-family: "Inter", sans-serif;
 }
+*{
+  scroll-behavior: smooth !important;
+}
 
 @theme inline {
   /* -- FONT SIZE -- */

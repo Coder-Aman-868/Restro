@@ -1,5 +1,5 @@
 <template>
-    <div class="px-5 md:py-[130px] sm:py-20 py-[60px] relative">
+    <div class="px-5 md:py-[130px] sm:py-20 py-[60px] relative" id="features">
         <div
             class="max-w-[1180px] mx-auto w-full flex justify-center items-center flex-col md:gap-[74px] sm:gap-[50px] gap-10 relative z-50">
             <div class="flex justify-between items-center gap-5 w-full flex-row flex-wrap">

@@ -1,5 +1,5 @@
 <template>
-    <div class="px-5 bg-dark-nevy-blue md:pt-[130px] md:pb-[170px] sm:py-20 py-15">
+    <div class="px-5 bg-dark-nevy-blue md:pt-[130px] md:pb-[170px] sm:py-20 py-15" id="contact">
         <div class="flex max-w-[1180px] mx-auto w-full justify-between items-stretch gap-x-5 gap-y-15 lg:flex-row flex-col">
             <div class="lg:max-w-[466px] w-full">
                 <Heading custom-class="sm:!text-custom-5xl !text-3xl !text-white !leading-125 !text-semibold"

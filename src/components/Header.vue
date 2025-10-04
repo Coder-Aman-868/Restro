@@ -9,7 +9,7 @@
                     open ? 'max-lg:right-0' : 'max-lg:-right-full',
                     'max-lg:fixed max-lg:top-0 max-lg:gap-5 duration-600 ease-in-out'
                 ]">
-                    <li v-for="link in links" class="text-base text-light-gray font-medium leading-100" :key="index">
+                    <li v-for="(link, index) in links" class="text-base text-light-gray font-medium leading-100" :key="index">
                         <a @click="toggleByNavLinks"
                             class="hover:text-light-pink transition-all duration-300 ease-in-out after:absolute relative after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-1 after:rounded-2xl after:bg-light-pink hover:after:w-full after:transition-all after:duration-300 after:ease-in-out"
                             :href="link.path">{{ link.name }}</a>
@@ -50,9 +50,9 @@ const open = ref(false)
 
 const links = [
     { name: 'Home', path: '#home' },
-    { name: 'About', path: '#about' },
+    { name: 'Collabs', path: '#collabs' },
     { name: 'Features', path: '#features' },
-    { name: 'Menu', path: '#menu' },
+    { name: 'Benifit', path: '#benifit' },
     { name: 'Contact', path: '#contact' },
 ]
 const active = ref(false)

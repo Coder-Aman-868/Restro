@@ -1,5 +1,5 @@
 <template>
-    <div class="px-5">
+    <div class="px-5 relative z-50" id="benifit">
         <div class="flex lg:flex-row flex-col-reverse justify-between items-center w-full max-w-[1180px] mx-auto gap-10">
             <div class="lg:max-w-[471px] w-full flex flex-col sm:gap-[50px] gap-[30px]">
                 <Heading custom-class="sm:!text-custom-5xl !text-3xl !text-dark-black" text="What Benifit Will You Get">

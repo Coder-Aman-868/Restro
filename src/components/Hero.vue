@@ -1,5 +1,5 @@
 <template>
-    <div class="px-5 ">
+    <div class="px-5" id="home">
         <div class="max-w-[1180px] mx-auto w-full flex justify-center items-center lg:flex-row flex-col-reverse">
             <div class="w-full lg:max-w-[555px]">
                 <Heading
