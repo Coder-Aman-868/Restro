@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 sm:px-5 py-16 sm:py-20 lg:py-[130px] relative overflow-hidden" id="choose-plan">
+    <div class="px-4 sm:px-5 py-16 sm:py-20 lg:py-[130px] relative" id="choose-plan">
         <div class="max-w-[1180px] mx-auto w-full flex flex-col justify-center items-center relative z-50">
             <!-- Header -->
             <Heading
@@ -26,11 +26,10 @@
             <div class="w-full mt-12 sm:mt-16 lg:mt-[67px] relative">
                 <!-- Slider Container -->
                 <div ref="sliderContainer"
-                    class="flex gap-5 lg:gap-[29px] overflow-x-auto overflow-y-visible scrollbar-hide snap-x snap-mandatory scroll-smooth lg:pt-5 pb-4 px-4 lg:px-0 lg:justify-center"
-                    style="scroll-padding-left: 1rem;">
+                    class="flex gap-3 sm:gap-4 lg:gap-[29px] overflow-x-auto overflow-y-visible scrollbar-hide snap-x snap-mandatory scroll-smooth pb-4 pl-4 pr-4 lg:px-0 lg:justify-center lg:pt-5">
                     <!-- Free Plan Card -->
                     <div
-                        class="min-w-[280px] sm:min-w-[320px] lg:min-w-[360px] snap-center flex-shrink-0 px-4 sm:px-5 pb-6 sm:pb-[25px] pt-8 sm:pt-10 flex flex-col items-center rounded-[20px] bg-white shadow-[0_4px_9px_0px_#0000000D] hover:shadow-[0_8px_20px_0px_#00000012] transition-all duration-300">
+                        class="min-w-[calc(100vw-80px)] sm:min-w-[320px] lg:min-w-[360px] snap-center flex-shrink-0 px-4 sm:px-5 pb-6 sm:pb-[25px] pt-8 sm:pt-10 flex flex-col items-center rounded-[20px] bg-white shadow-[0_4px_9px_0px_#0000000D] hover:shadow-[0_8px_20px_0px_#00000012] transition-all duration-300">
                         <Heading custom-class="!text-2xl sm:!text-custom-3xl !font-semibold" text="Free" />
                         <Paragraph custom-class="my-3 max-w-[200px] text-center text-sm sm:text-base"
                             text="Have a go and test your superpowers" />
@@ -87,68 +86,74 @@
 
                     <!-- Pro Plan Card (Featured) -->
                     <div ref="proCard"
-                        class="min-w-[280px] sm:min-w-[320px] lg:min-w-[360px] snap-center flex-shrink-0 px-4 sm:px-5 pb-6 sm:pb-[25px] pt-8 sm:pt-10 flex flex-col items-center rounded-[20px] bg-light-pink shadow-[0_4px_9px_0px_#0000000D] hover:shadow-[0_12px_28px_0px_#00000020] transition-all duration-300 lg:scale-105 lg:mx-2">
-                        <Heading custom-class="!text-2xl sm:!text-custom-3xl !font-semibold !text-white" text="Pro" />
-                        <Paragraph custom-class="my-3 max-w-[200px] text-center !text-white text-sm sm:text-base"
-                            text="Experiment the power of infinite possibilities" />
-                        <div class="relative h-[56px]">
+                        class="min-w-[calc(100vw-80px)] overflow-hidden relative sm:min-w-[320px] lg:min-w-[360px] snap-center flex-shrink-0 px-4 sm:px-5 pb-6 sm:pb-[25px] pt-8 sm:pt-10  rounded-[20px] bg-light-pink shadow-[0_4px_9px_0px_#0000000D] hover:shadow-[0_12px_28px_0px_#00000020] transition-all duration-300 lg:scale-105 lg:mx-2">
+                        <div class="relative z-50 flex flex-col items-center">
+                            <Heading custom-class="!text-2xl sm:!text-custom-3xl !font-semibold !text-white"
+                                text="Pro" />
+                            <Paragraph custom-class="my-3 max-w-[200px] text-center !text-white text-sm sm:text-base"
+                                text="Experiment the power of infinite possibilities" />
+                            <div class="relative h-[56px]">
+                                <span
+                                    class="absolute top-0 left-0 text-base sm:text-lg font-medium leading-[30px] text-white">$</span>
+                                <h5
+                                    class="pl-3 sm:pl-4 pt-[26px] text-4xl sm:text-custom-5xl font-semibold leading-[30px] text-white">
+                                    {{ ismonthly ? "2" : "8" }}
+                                </h5>
+                            </div>
                             <span
-                                class="absolute top-0 left-0 text-base sm:text-lg font-medium leading-[30px] text-white">$</span>
-                            <h5
-                                class="pl-3 sm:pl-4 pt-[26px] text-4xl sm:text-custom-5xl font-semibold leading-[30px] text-white">
-                                {{ ismonthly ? "2" : "8" }}
-                            </h5>
+                                class="bg-[#85DAB9] rounded-[10px] py-[5px] px-[11px] text-xs font-semibold leading-[30px] text-white my-4">
+                                Save $50 a year
+                            </span>
+                            <div class="w-full py-6 sm:py-[26px] px-6 sm:px-[37px] bg-white rounded-[10px]">
+                                <div class="flex gap-2.5 items-start mb-5">
+                                    <Chack
+                                        custom-class="!min-w-[22px] !min-h-[22px] sm:!min-w-[26px] sm:!min-h-[26px] w-[22px] h-[22px] sm:w-[26px] sm:h-[26px] mt-0.5" />
+                                    <span
+                                        class="text-base sm:text-lg font-medium leading-[26px] sm:leading-[30px] text-dark-black">4
+                                        Users</span>
+                                </div>
+                                <div class="flex gap-2.5 items-start mb-5">
+                                    <Chack
+                                        custom-class="!min-w-[22px] !min-h-[22px] sm:!min-w-[26px] sm:!min-h-[26px] w-[22px] h-[22px] sm:w-[26px] sm:h-[26px] mt-0.5" />
+                                    <span
+                                        class="text-base sm:text-lg font-medium leading-[26px] sm:leading-[30px] text-dark-black">All
+                                        apps</span>
+                                </div>
+                                <div class="flex gap-2.5 items-start mb-5">
+                                    <Chack
+                                        custom-class="!min-w-[22px] !min-h-[22px] sm:!min-w-[26px] sm:!min-h-[26px] w-[22px] h-[22px] sm:w-[26px] sm:h-[26px] mt-0.5" />
+                                    <span
+                                        class="text-base sm:text-lg font-medium leading-[26px] sm:leading-[30px] text-dark-black">Unlimited
+                                        editable exports</span>
+                                </div>
+                                <div class="flex gap-2.5 items-start mb-5">
+                                    <Chack
+                                        custom-class="!min-w-[22px] !min-h-[22px] sm:!min-w-[26px] sm:!min-h-[26px] w-[22px] h-[22px] sm:w-[26px] sm:h-[26px] mt-0.5" />
+                                    <span
+                                        class="text-base sm:text-lg font-medium leading-[26px] sm:leading-[30px] text-dark-black">Folders
+                                        and collaboration</span>
+                                </div>
+                                <div class="flex gap-2.5 items-start mb-6">
+                                    <Chack
+                                        custom-class="!min-w-[22px] !min-h-[22px] sm:!min-w-[26px] sm:!min-h-[26px] w-[22px] h-[22px] sm:w-[26px] sm:h-[26px] mt-0.5" />
+                                    <span
+                                        class="text-base sm:text-lg font-medium leading-[26px] sm:leading-[30px] text-dark-black">All
+                                        incoming apps</span>
+                                </div>
+                                <button
+                                    class="text-base sm:text-lg font-medium w-full text-white leading-[26px] sm:leading-[30px] hover:bg-transparent bg-light-pink px-6 sm:px-[30px] py-3 sm:py-[17px] rounded-[20px] border border-light-pink hover:text-light-pink transition-all duration-300 ease-in-out cursor-pointer shadow-[0px_4px_9px_0px_#0000000D]">
+                                    Go to pro
+                                </button>
+                            </div>
                         </div>
-                        <span
-                            class="bg-[#85DAB9] rounded-[10px] py-[5px] px-[11px] text-xs font-semibold leading-[30px] text-white my-4">
-                            Save $50 a year
-                        </span>
-                        <div class="w-full py-6 sm:py-[26px] px-6 sm:px-[37px] bg-white rounded-[10px]">
-                            <div class="flex gap-2.5 items-start mb-5">
-                                <Chack
-                                    custom-class="!min-w-[22px] !min-h-[22px] sm:!min-w-[26px] sm:!min-h-[26px] w-[22px] h-[22px] sm:w-[26px] sm:h-[26px] mt-0.5" />
-                                <span
-                                    class="text-base sm:text-lg font-medium leading-[26px] sm:leading-[30px] text-dark-black">4
-                                    Users</span>
-                            </div>
-                            <div class="flex gap-2.5 items-start mb-5">
-                                <Chack
-                                    custom-class="!min-w-[22px] !min-h-[22px] sm:!min-w-[26px] sm:!min-h-[26px] w-[22px] h-[22px] sm:w-[26px] sm:h-[26px] mt-0.5" />
-                                <span
-                                    class="text-base sm:text-lg font-medium leading-[26px] sm:leading-[30px] text-dark-black">All
-                                    apps</span>
-                            </div>
-                            <div class="flex gap-2.5 items-start mb-5">
-                                <Chack
-                                    custom-class="!min-w-[22px] !min-h-[22px] sm:!min-w-[26px] sm:!min-h-[26px] w-[22px] h-[22px] sm:w-[26px] sm:h-[26px] mt-0.5" />
-                                <span
-                                    class="text-base sm:text-lg font-medium leading-[26px] sm:leading-[30px] text-dark-black">Unlimited
-                                    editable exports</span>
-                            </div>
-                            <div class="flex gap-2.5 items-start mb-5">
-                                <Chack
-                                    custom-class="!min-w-[22px] !min-h-[22px] sm:!min-w-[26px] sm:!min-h-[26px] w-[22px] h-[22px] sm:w-[26px] sm:h-[26px] mt-0.5" />
-                                <span
-                                    class="text-base sm:text-lg font-medium leading-[26px] sm:leading-[30px] text-dark-black">Folders
-                                    and collaboration</span>
-                            </div>
-                            <div class="flex gap-2.5 items-start mb-6">
-                                <Chack
-                                    custom-class="!min-w-[22px] !min-h-[22px] sm:!min-w-[26px] sm:!min-h-[26px] w-[22px] h-[22px] sm:w-[26px] sm:h-[26px] mt-0.5" />
-                                <span
-                                    class="text-base sm:text-lg font-medium leading-[26px] sm:leading-[30px] text-dark-black">All
-                                    incoming apps</span>
-                            </div>
-                            <button
-                                class="text-base sm:text-lg font-medium w-full text-white leading-[26px] sm:leading-[30px] hover:bg-transparent bg-light-pink px-6 sm:px-[30px] py-3 sm:py-[17px] rounded-[20px] border border-light-pink hover:text-light-pink transition-all duration-300 ease-in-out cursor-pointer shadow-[0px_4px_9px_0px_#0000000D]">
-                                Go to pro
-                            </button>
+                        <div
+                            class="bg-[#FF987E] size-[600px] rounded-[9999px] absolute top-[146px] left-1/2 -translate-x-1/2">
                         </div>
                     </div>
 
                     <!-- Business Plan Card -->
                     <div
-                        class="min-w-[280px] sm:min-w-[320px] lg:min-w-[360px] snap-center flex-shrink-0 px-4 sm:px-5 pb-6 sm:pb-[25px] pt-8 sm:pt-10 flex flex-col items-center rounded-[20px] bg-white shadow-[0_4px_9px_0px_#0000000D] hover:shadow-[0_8px_20px_0px_#00000012] transition-all duration-300">
+                        class="min-w-[calc(100vw-80px)] sm:min-w-[320px] lg:min-w-[360px] snap-center flex-shrink-0 px-4 sm:px-5 pb-6 sm:pb-[25px] pt-8 sm:pt-10 flex flex-col items-center rounded-[20px] bg-white shadow-[0_4px_9px_0px_#0000000D] hover:shadow-[0_8px_20px_0px_#00000012] transition-all duration-300">
                         <Heading custom-class="!text-2xl sm:!text-custom-3xl !font-semibold" text="Business" />
                         <Paragraph custom-class="my-3 max-w-[251px] text-center text-sm sm:text-base"
                             text="Unveil new superpowers and join the Design League" />
@@ -244,7 +249,7 @@ import Chack from '../assets/icons/Chack.vue';
 const ismonthly = ref(true);
 const sliderContainer = ref(null);
 const proCard = ref(null);
-const currentSlide = ref(1); // Start with Pro card (index 1)
+const currentSlide = ref(1);
 
 const togglePlan = () => {
     ismonthly.value = !ismonthly.value;
@@ -276,7 +281,6 @@ const updateCurrentSlide = () => {
     }
 };
 
-// Scroll to Pro card on mount
 const scrollToProCard = () => {
     nextTick(() => {
         if (proCard.value) {
@@ -294,7 +298,6 @@ onMounted(() => {
         sliderContainer.value.addEventListener('scroll', updateCurrentSlide);
     }
 
-    // Scroll to Pro card after component is mounted
     setTimeout(scrollToProCard, 100);
 });
 
@@ -306,7 +309,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Hide scrollbar but keep functionality */
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
