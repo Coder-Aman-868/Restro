@@ -23,7 +23,7 @@
                     <label class="text-lg font-medium leading-100 text-white" for="message">Message</label>
                     <textarea id="message" type="text" placeholder="What are you say ?"
                         class="rounded-[10px] bg-white text-sm font-medium leading-100 py-[17px] px-5 outline-none placeholder:text-light-gray h-20" />
-                        <button class="w-full bg-light-pink text-white border-transparent text-base font-semibold leading-100 py-5 rounded-[10px] hover:bg-transparent">Request Demo</button>
+                        <button class="w-full bg-light-pink text-white border border-transparent text-base font-semibold leading-100 py-5 rounded-[10px] hover:bg-transparent hover:border-light-pink hover:text-light-pink transition-all duration-300 ease-in-out cursor-pointer text-nowrap">Request Demo</button>
                 </form>
                 <div class="ml-auto text-end mt-2.5 max-w-max text-white"><span class="opacity-50">or </span> Start Free Trial</div>
             </div>
