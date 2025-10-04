@@ -281,24 +281,11 @@ const updateCurrentSlide = () => {
     }
 };
 
-const scrollToProCard = () => {
-    nextTick(() => {
-        if (proCard.value) {
-            proCard.value.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest',
-                inline: 'center'
-            });
-        }
-    });
-};
-
 onMounted(() => {
     if (sliderContainer.value) {
         sliderContainer.value.addEventListener('scroll', updateCurrentSlide);
     }
 
-    setTimeout(scrollToProCard, 100);
 });
 
 onUnmounted(() => {
